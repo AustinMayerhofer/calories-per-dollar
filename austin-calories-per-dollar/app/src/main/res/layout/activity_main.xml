@@ -20,7 +20,7 @@
         -->
 
     <EditText
-        android:id="@+id/calories"
+        android:id="@+id/calories_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:inputType="number"
@@ -33,7 +33,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <EditText
-        android:id="@+id/num_servings"
+        android:id="@+id/numServings_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
@@ -46,7 +46,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <EditText
-        android:id="@+id/price"
+        android:id="@+id/price_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
@@ -59,7 +59,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/calories_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CALORIES PER SERVING:"
@@ -70,6 +70,34 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.06"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <TextView
+        android:id="@+id/numServings_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NUMBER OF SERVINGS:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.21"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <TextView
+        android:id="@+id/price_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRICE:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36"
         app:layout_constraintWidth_percent="0.25" />
 
 </android.support.constraint.ConstraintLayout>
