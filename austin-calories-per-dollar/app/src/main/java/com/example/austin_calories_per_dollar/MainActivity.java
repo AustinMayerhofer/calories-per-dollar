@@ -2,6 +2,8 @@ package com.example.austin_calories_per_dollar;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -25,12 +27,65 @@ public class MainActivity extends AppCompatActivity {
         price_input = findViewById(R.id.price_input);
         calories_per_dollar_output = findViewById(R.id.caloriesPerDollar_box);
 
-        double calories_per_dollar = calculatePricePerDollar();
-        calories_per_dollar_output.setText(String.format("%.1f", calories_per_dollar));
+        calories_input.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                updateCaloriesPerDollar();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        num_servings_input.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                updateCaloriesPerDollar();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        price_input.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                updateCaloriesPerDollar();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
     }
 
-    public double calculatePricePerDollar() {
+    public void updateCaloriesPerDollar() {
+        double calories_per_dollar = calculateCaloriesPerDollar();
+        calories_per_dollar_output.setText(String.format("%.1f", calories_per_dollar));
+    }
+
+    public double calculateCaloriesPerDollar() {
 
         if (calories_input.getText().length() == 0 ||
         num_servings_input.getText().length() == 0 ||
