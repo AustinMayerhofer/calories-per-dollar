@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         price_input = findViewById(R.id.price_input);
         calories_per_dollar_output = findViewById(R.id.caloriesPerDollar_box);
 
-        double test = calculatePricePerDollar();
-        calories_per_dollar_output.setText(Double.toString(test));
+        double calories_per_dollar = calculatePricePerDollar();
+        calories_per_dollar_output.setText(String.format("%.1f", calories_per_dollar));
 
     }
 
@@ -39,14 +39,18 @@ public class MainActivity extends AppCompatActivity {
         }
 
         double price = Double.parseDouble(price_input.getText().toString());
-        if (price == 0)
+        if (price < 0.0005) { // double comparison with an epsilon
             return 0;
+        }
 
         int calories = Integer.parseInt(calories_input.getText().toString());
         double num_servings = Double.parseDouble(num_servings_input.getText().toString());
 
+        double total_calories = calories * num_servings;
+        double calories_per_dollar = total_calories / price;
+
         //Toast.makeText(this, "Price: " + price, Toast.LENGTH_LONG).show();
 
-        return 0;
+        return calories_per_dollar;
     }
 }
