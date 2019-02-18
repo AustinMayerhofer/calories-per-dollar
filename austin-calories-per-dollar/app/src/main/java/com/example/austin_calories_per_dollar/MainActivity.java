@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         price_input = findViewById(R.id.price_input);
         calories_per_dollar_output = findViewById(R.id.caloriesPerDollar_box);
 
+        // addTextChangedListener makes the calories/dollar
+        // update whenever the user types
         calories_input.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -80,11 +82,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // updates the calories/dollar field
     public void updateCaloriesPerDollar() {
         double calories_per_dollar = calculateCaloriesPerDollar();
         calories_per_dollar_output.setText(String.format("%.1f", calories_per_dollar));
     }
 
+    // calculates calories/dollar
     public double calculateCaloriesPerDollar() {
 
         if (calories_input.getText().length() == 0 ||
