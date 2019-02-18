@@ -23,6 +23,8 @@
         android:id="@+id/calories_input"
         android:layout_width="180dp"
         android:layout_height="50dp"
+        android:autofillHints="@string/calories"
+        android:hint="@string/calories"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
@@ -30,14 +32,14 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05"
-        android:autofillHints="@string/calories"
-        android:hint="@string/calories"
         tools:targetApi="o" />
 
     <EditText
         android:id="@+id/numServings_input"
         android:layout_width="180dp"
         android:layout_height="50dp"
+        android:autofillHints="@string/servings"
+        android:hint="@string/servings"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
@@ -45,14 +47,14 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.15"
-        android:autofillHints="@string/servings"
-        android:hint="@string/servings"
         tools:targetApi="o" />
 
     <EditText
         android:id="@+id/price_input"
         android:layout_width="180dp"
         android:layout_height="50dp"
+        android:autofillHints="@string/price"
+        android:hint="@string/price"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
@@ -60,33 +62,32 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.25"
-        android:autofillHints="@string/price"
-        android:hint="@string/price"
         tools:targetApi="o" />
 
     <EditText
         android:id="@+id/caloriesPerDollar_box"
         android:layout_width="180dp"
         android:layout_height="50dp"
+        android:autofillHints="@string/calories_final"
         android:clickable="false"
         android:cursorVisible="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
+        android:hint="@string/calories_final"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.35"
-        android:autofillHints="@string/calories_final"
-        android:hint="@string/calories_final"
-        android:inputType="numberDecimal"
         tools:targetApi="o" />
 
     <TextView
         android:id="@+id/calories_label"
         android:layout_width="180dp"
         android:layout_height="50dp"
+        android:gravity=""
         android:text="@string/calories"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -94,13 +95,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
-        android:gravity="" />
+        app:layout_constraintVertical_bias="0.05" />
 
     <TextView
         android:id="@+id/numServings_label"
         android:layout_width="180dp"
         android:layout_height="50dp"
+        android:gravity=""
         android:text="@string/servings"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -108,13 +109,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15"
-        android:gravity=""/>
+        app:layout_constraintVertical_bias="0.15" />
 
     <TextView
         android:id="@+id/price_label"
         android:layout_width="180dp"
         android:layout_height="50dp"
+        android:gravity=""
         android:text="@string/price"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -122,13 +123,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25"
-        android:gravity="" />
+        app:layout_constraintVertical_bias="0.25" />
 
     <TextView
         android:id="@+id/caloriesPerDollar_label"
         android:layout_width="180dp"
         android:layout_height="50dp"
+        android:gravity=""
         android:text="@string/calories_final"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -136,7 +137,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35"
-        android:gravity="" />
+        app:layout_constraintVertical_bias="0.35" />
 
 </android.support.constraint.ConstraintLayout>
