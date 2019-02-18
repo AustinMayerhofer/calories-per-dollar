@@ -4,4 +4,5 @@
     <string name="servings">Number of Servings</string>
     <string name="price">Price</string>
     <string name="calories_final">Calories per Dollar</string>
+    <string name="horizontal">0.75</string>
 </resources>
